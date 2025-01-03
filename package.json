@@ -34,7 +34,7 @@
 		"execa": "^9.4.0",
 		"file-type": "^19.5.0",
 		"image-dimensions": "^2.3.0",
-		"jpegtran-bin": "^7.0.0",
+		"jpegtran-bin": "https://github.com/PruvoNet/jpegtran-bin",
 		"uint8array-extras": "^1.4.0"
 	},
 	"devDependencies": {
