@@ -11,7 +11,7 @@
 	},
 	"sideEffects": false,
 	"engines": {
-		"node": ">=18"
+		"node": "^20 || ^22 | >=24"
 	},
 	"scripts": {
 		"test": "xo && ava"
@@ -34,7 +34,7 @@
 		"execa": "^9.4.0",
 		"file-type": "^19.5.0",
 		"image-dimensions": "^2.3.0",
-		"jpegtran-bin": "https://github.com/PruvoNet/jpegtran-bin",
+		"jpegtran-bin": "https://github.com/PruvoNet/jpegtran-bin#2c554350fefdae6d2e7a2ce92362a82606961507",
 		"uint8array-extras": "^1.4.0"
 	},
 	"devDependencies": {
