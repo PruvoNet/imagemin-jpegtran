@@ -1,14 +1,17 @@
 {
 	"name": "imagemin-jpegtran",
-	"version": "8.1.0",
+	"version": "8.2.0",
 	"repository": "PruvoNet/imagemin-jpegtran",
 	"description": "jpegtran imagemin plugin",
 	"license": "MIT",
 	"type": "module",
 	"exports": {
-		"types": "./index.d.ts",
-		"default": "./index.js"
+		".": {
+			"types": "./index.d.ts",
+			"default": "./index.js"
+		}
 	},
+	"types": "./index.d.ts",
 	"sideEffects": false,
 	"engines": {
 		"node": ">=20"
