@@ -17,6 +17,15 @@ jobs:
       fail-fast: false
       matrix:
         node-version: ['24.15.0', '26.1.0']
+        variant:
+          - darwin-x64
+          - darwin-arm64
+          - linux-x64
+          - linux-x64-musl
+          - linux-arm64
+          - linux-arm64-musl
+          - win32-x64
+          - win32-arm64
         include:
           - variant: darwin-x64
             runner: macos-14
@@ -53,12 +62,9 @@ jobs:
           architecture: ${{ matrix.node-arch }}
 
       - if: ${{ !matrix.musl }}
+        shell: bash
         run: npm install
 
-      # jpegtran has no clean --version (no exit-0 flag). `-h` always
-      # exits 1 but the process loads first, which is exactly what we
-      # want to prove: that the right-arch tarball got downloaded and
-      # extracted.
       - name: Show resolved jpegtran binary
         if: ${{ !matrix.musl }}
         shell: bash
@@ -72,10 +78,12 @@ jobs:
           "$bin" -h 2>&1 | head -3 || true
 
       - if: ${{ !matrix.musl }}
+        shell: bash
         run: npm test
 
       - name: Install + verify + test (Alpine docker)
         if: matrix.musl
+        shell: bash
         env:
           NODE_VERSION: ${{ matrix.node-version }}
         run: |
