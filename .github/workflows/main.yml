@@ -94,7 +94,7 @@ jobs:
             -e CI=true \
             "node:${major}-alpine" sh -c '
               set -e
-              apk add --no-cache build-base autoconf automake libtool nasm tar file
+              apk add --no-cache build-base autoconf automake libtool nasm tar file git
               npm install
               bin=$(node --input-type=module -e "import(\"jpegtran-bin\").then(m => process.stdout.write(m.default))")
               echo "Resolved jpegtran binary: $bin"
