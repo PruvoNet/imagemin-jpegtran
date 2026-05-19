@@ -1,9 +1,9 @@
 {
 	"name": "imagemin-jpegtran",
-	"version": "8.0.0",
+	"version": "8.1.0",
+	"repository": "PruvoNet/imagemin-jpegtran",
 	"description": "jpegtran imagemin plugin",
 	"license": "MIT",
-	"repository": "imagemin/imagemin-jpegtran",
 	"type": "module",
 	"exports": {
 		"types": "./index.d.ts",
@@ -11,13 +11,14 @@
 	},
 	"sideEffects": false,
 	"engines": {
-		"node": "^20 || ^22 | >=24"
+		"node": ">=20"
 	},
 	"scripts": {
 		"test": "xo && ava"
 	},
 	"files": [
-		"index.js"
+		"index.js",
+		"index.d.ts"
 	],
 	"keywords": [
 		"compress",
@@ -34,7 +35,7 @@
 		"execa": "^9.4.0",
 		"file-type": "^19.5.0",
 		"image-dimensions": "^2.3.0",
-		"jpegtran-bin": "https://github.com/PruvoNet/jpegtran-bin#2c554350fefdae6d2e7a2ce92362a82606961507",
+		"jpegtran-bin": "github:PruvoNet/jpegtran-bin#v7.2.0",
 		"uint8array-extras": "^1.4.0"
 	},
 	"devDependencies": {
